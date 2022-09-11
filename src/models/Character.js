@@ -54,7 +54,7 @@ class Character {
    * @param {string} skill The camel case name of the skill
    * @returns The correct skill modifier number for the requested skill
    */
-  getSkillModifier(skill) {
+  getProficiencyModifier(skill) {
     return this.attributes[Character.skillAttribute[skill]].skills[skill].proficient ? this.proficiency * (this.attributes[Character.skillAttribute[skill]].skills[skill].expert ? 2 : 1) : 0;
   }
 
@@ -63,7 +63,7 @@ class Character {
    * @returns The number for the character's passive perception
    */
   passivePerception() {
-    return 10 + Character.getAttributeModifier(this.attributes.wisdom.value || 0) + this.getSkillModifier('perception')
+    return 10 + Character.getAttributeModifier(this.attributes.wisdom.value || 0) + this.getProficiencyModifier('perception')
   }
 
   /**
@@ -71,7 +71,7 @@ class Character {
    * @returns The number for the character's passive insight
    */
   passiveInsight() {
-    return 10 + Character.getAttributeModifier(this.attributes.wisdom.value || 0) + this.getSkillModifier('insight')
+    return 10 + Character.getAttributeModifier(this.attributes.wisdom.value || 0) + this.getProficiencyModifier('insight')
   }
 
   /**
@@ -89,7 +89,7 @@ class Character {
    * @returns The skill modifier number
    */
   skillModifier(skill) {
-    return Character.getAttributeModifier(this.attributes[Character.skillAttribute[skill]].value || 0) + this.getSkillModifier(skill)
+    return Character.getAttributeModifier(this.attributes[Character.skillAttribute[skill]].value || 0) + this.getProficiencyModifier(skill)
   }
 }
 

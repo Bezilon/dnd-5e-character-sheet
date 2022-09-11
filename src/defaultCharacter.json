@@ -142,7 +142,18 @@
       }
     }
   },
-  "armorClass": 10,
+  "martialProficiencies": {
+    "lightArmour": false,
+    "simpleWeapons": false,
+    "mediumArmour": false,
+    "martialWeapons": false,
+    "heavyArmour": false,
+    "shields": false
+  },
+  "languages": "",
+  "toolsAndOtherProficiencies": "",
+  "armourClass": 10,
   "initiative": 0,
-  "speed": 30
+  "speed": 30,
+  "classFeautres": []
 }

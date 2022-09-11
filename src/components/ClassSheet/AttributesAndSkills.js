@@ -21,7 +21,7 @@ const AttributesAndSkills = ({character, setCharacter}) => <div>
           <input 
             type="checkbox"
             checked={character.attributes[attribute].proficient}
-            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].proficient = !nextCharacter.attributes[attribute].proficient; setCharacter(nextCharacter); }}
+            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].proficient = !character.attributes[attribute].proficient; setCharacter(nextCharacter); }}
           />
         </div>
         <div>{character.savingThrow(attribute)}</div>
@@ -33,14 +33,14 @@ const AttributesAndSkills = ({character, setCharacter}) => <div>
           <input 
             type="checkbox"
             checked={character.attributes[attribute].skills[skill].expert}
-            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].skills[skill].expert = !nextCharacter.attributes[attribute].skills[skill].expert; setCharacter(nextCharacter); }}
+            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].skills[skill].expert = !character.attributes[attribute].skills[skill].expert; setCharacter(nextCharacter); }}
           />
         </div>
         <div>
           <input 
             type="checkbox"
             checked={character.attributes[attribute].skills[skill].proficient}
-            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].skills[skill].proficient = !nextCharacter.attributes[attribute].skills[skill].proficient; setCharacter(nextCharacter); }}
+            onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].skills[skill].proficient = !character.attributes[attribute].skills[skill].proficient; setCharacter(nextCharacter); }}
           />
         </div>
         <div>{character.skillModifier(skill)}</div>
