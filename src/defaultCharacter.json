@@ -1,0 +1,148 @@
+{
+  "name": "Ravas",
+  "race": "Foxkin",
+  "age": "30",
+  "height": "6'",
+  "weight": "165",
+  "eyes": "Green",
+  "skin": "Blue Fur",
+  "hair": "Blue",
+  "scars": "",
+  "distinguishingMarks": "",
+  "background": "Immaculate",
+  "alignment": "Lawfuil Good",
+  "experience": "5th Level",
+  "level": 5,
+  "class": "Monk",
+  "subClass": "WAY OF THE DRUNKEN MASTER",
+  "proficiency": 0,
+  "inspiration": 0,
+  "hitPoints": {
+    "maximum": 20,
+    "remaining": 20,
+    "temporary": 0
+  },
+  "hitDice": {
+    "type": "d6",
+    "total": 3,
+    "used": 0
+  },
+  "deathSaves": {
+    "successes": [ false, false, false ],
+    "failures": [ false, false, false ]
+  },
+  "attributes": {
+    "strength": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        "athletics": {
+          "proficient": false,
+          "expert": false
+        }
+      }
+    },
+    "dexterity": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        "acrobatics": {
+          "proficient": false,
+          "expert": false
+        },
+        "sleightOfHand": {
+          "proficient": false,
+          "expert": false
+        },
+        "stealth": {
+          "proficient": false,
+          "expert": false
+        }
+      }
+    },
+    "constitution": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        
+      }
+    },
+    "intelligence": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        "arcana": {
+          "proficient": false,
+          "expert": false
+        },
+        "history": {
+          "proficient": false,
+          "expert": false
+        },
+        "investigatin": {
+          "proficient": false,
+          "expert": false
+        },
+        "nature": {
+          "proficient": false,
+          "expert": false
+        },
+        "religion": {
+          "proficient": false,
+          "expert": false
+        }
+      }
+    },
+    "wisdom": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        "animalHandling": {
+          "proficient": false,
+          "expert": false
+        },
+        "insight": {
+          "proficient": false,
+          "expert": false
+        },
+        "medicine": {
+          "proficient": false,
+          "expert": false
+        },
+        "perception": {
+          "proficient": false,
+          "expert": false
+        },
+        "survival": {
+          "proficient": false,
+          "expert": false
+        }
+      }
+    },
+    "chasrisma": {
+      "proficient": false,
+      "value": 10,
+      "skills": {
+        "deception": {
+          "proficient": false,
+          "expert": false
+        },
+        "intimidation": {
+          "proficient": false,
+          "expert": false
+        },
+        "performance": {
+          "proficient": false,
+          "expert": false
+        },
+        "persuasion": {
+          "proficient": false,
+          "expert": false
+        }
+      }
+    }
+  },
+  "armorClass": 10,
+  "initiative": 0,
+  "speed": 30
+}

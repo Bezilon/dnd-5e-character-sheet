@@ -1,0 +1,11 @@
+.class-sheet {
+  &__skill-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  &__skill-row {
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+  }
+}

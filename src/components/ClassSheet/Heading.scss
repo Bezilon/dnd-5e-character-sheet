@@ -1,0 +1,16 @@
+.class-sheet {
+  &__heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__heading-center-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__heading-right-column {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}

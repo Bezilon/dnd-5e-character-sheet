@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.scss';
+
+import Cookie from './models/Cookie';
+
+import ClassSheet from './components/ClassSheet';
+
+import defaultCharacter from './defaultCharacter.json';
+import Character from './models/Character';
+
+const App = () => {
+  const [character, setCharacterRaw] = useState(null);
+
+  const setCharacter = rawCharacter => setCharacterRaw(new Character(rawCharacter));
+
+  useEffect(() => {
+    const savedCharacter = JSON.parse(Cookie.get('DnD5eCharacterSheet') || 'null')
+
+    setCharacter(savedCharacter || defaultCharacter)
+  }, []);
+
+  useEffect(() => {
+    if(character) {
+      Cookie.set("DnD5eCharacterSheet", JSON.stringify(character || null), 60 * 60 * 24 * 365)
+    }
+  });
+
+  return <div className="App">
+    { character ? <ClassSheet character={character} setCharacter={setCharacter}/> : null }
+  </div>;
 }
 
 export default App;
