@@ -43,7 +43,7 @@ const AttributesAndSkills = ({character, setCharacter}) => <div>
             onChange={() => { const nextCharacter = {...character}; nextCharacter.attributes[attribute].skills[skill].proficient = !nextCharacter.attributes[attribute].skills[skill].proficient; setCharacter(nextCharacter); }}
           />
         </div>
-        <div>{character.skill(skill)}</div>
+        <div>{character.skillModifier(skill)}</div>
         <div>{Case.upper(skill)}</div>
       </div>)}
     </div>
