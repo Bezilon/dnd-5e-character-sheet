@@ -1,5 +1,3 @@
-import defaultCharacter from "../defaultCharacter.json"
-
 type HitPoints = {
   maximum: number,
   remaining: number,
@@ -180,8 +178,8 @@ export default class Character {
    * @returns The correct skill modifier number for the requested skill
    */
   getProficiencyModifier(skillName: string): number {
-    const attributeName: string = (Character.skillAttributes.find(skillAttribute => skillAttribute[0] == skillName) || [])[1] || '';
-    const foundSkill: Skill|undefined = this.attributes.find(attribute => attribute.name == attributeName)?.skills.find(skill => skill.name == skillName)
+    const attributeName: string = (Character.skillAttributes.find(skillAttribute => skillAttribute[0] === skillName) || [])[1] || '';
+    const foundSkill: Skill|undefined = this.attributes.find(attribute => attribute.name === attributeName)?.skills.find(skill => skill.name === skillName)
     return foundSkill?.proficient ? this.proficiency * (foundSkill?.expert ? 2 : 1) : 0;
   }
 
@@ -190,7 +188,7 @@ export default class Character {
    * @returns The number for the character's passive perception
    */
   passivePerception(): number {
-    return 10 + Character.getAttributeModifier(this.attributes.find(attribute => attribute.name == 'wisdom')?.value || 0) + this.getProficiencyModifier('perception')
+    return 10 + Character.getAttributeModifier(this.attributes.find(attribute => attribute.name === 'wisdom')?.value || 0) + this.getProficiencyModifier('perception')
   }
 
   /**
@@ -198,7 +196,7 @@ export default class Character {
    * @returns The number for the character's passive insight
    */
   passiveInsight(): number {
-    return 10 + Character.getAttributeModifier(this.attributes.find(attribute => attribute.name == 'wisdom')?.value || 0) + this.getProficiencyModifier('insight')
+    return 10 + Character.getAttributeModifier(this.attributes.find(attribute => attribute.name === 'wisdom')?.value || 0) + this.getProficiencyModifier('insight')
   }
 
   /**
@@ -207,7 +205,7 @@ export default class Character {
    * @returns The saving throw modifier of the requested attribute
    */
   savingThrow(attributeName: string): number {
-    return Character.getAttributeModifier(this.attributes.find(attribute => attribute.name == attributeName)?.value || 0)
+    return Character.getAttributeModifier(this.attributes.find(attribute => attribute.name === attributeName)?.value || 0)
   }
 
   /**
@@ -216,7 +214,7 @@ export default class Character {
    * @returns The skill modifier number
    */
   skillModifier(skillName: string): number {
-    const attributeName: string = (Character.skillAttributes.find(skillAttribute => skillAttribute[0] == skillName) || [])[1] || '';
-    return Character.getAttributeModifier(this.attributes.find(attribute => attribute.name == attributeName)?.value || 0) + this.getProficiencyModifier(skillName)
+    const attributeName: string = (Character.skillAttributes.find(skillAttribute => skillAttribute[0] === skillName) || [])[1] || '';
+    return Character.getAttributeModifier(this.attributes.find(attribute => attribute.name === attributeName)?.value || 0) + this.getProficiencyModifier(skillName)
   }
 }
