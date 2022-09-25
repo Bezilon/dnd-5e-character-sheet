@@ -1,13 +1,17 @@
+import React from "react";
+
 import "./LeftColumn.scss";
 
-import BEM from "../../models/BEM";
-import Character from "../../models/Character";
-
-import { baseClass } from "../ClassSheet";
-import AttributesAndSkills from "./AttributesAndSkills";
 import Case from "case";
 
-const LeftColumn = props => {
+import BEM from "../../models/BEM";
+
+import { SheetProps } from "../Sheet";
+import { baseClass } from "../ClassSheet";
+
+import AttributesAndSkills from "./AttributesAndSkills";
+
+const LeftColumn = (props: SheetProps) => {
   const { character, setCharacter } = props
 
   return <div className={BEM.composeClass(baseClass, 'column')}>
@@ -29,7 +33,7 @@ const LeftColumn = props => {
         RACIAL TRAITS
       </div>
       <div>
-        <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})}>{character.racialTraits}</textarea>
+        <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})} value={character.racialTraits}/>
       </div>
     </div>
 
@@ -52,11 +56,11 @@ const LeftColumn = props => {
       <div>
         <div>
           <div>LANGUAGES</div>
-          <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})}>{character.languages}</textarea>
+          <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})} value={character.languages}/>
         </div>
         <div>
           <div>TOOLS & OTHER PROFICIENCIES</div>
-          <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})}>{character.toolsAndOtherProficiencies}</textarea>
+          <textarea onChange={e => setCharacter({...character, racialTraits: e.target.value})} value={character.toolsAndOtherProficiencies}/>
         </div>
       </div>
     </div>

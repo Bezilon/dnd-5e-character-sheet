@@ -3,12 +3,12 @@ class BEM {
   /**
    * This function generates the BEM standard class
    * @param {string} b The name of the block
-   * @param {string} e The name of the element, or you can pass the modifier list as a string Array
+   * @param {string|Array<string>} e The name of the element, or you can pass the modifier list as a string Array
    * @param {Array<string>} m The list of modifiers
    * 
    * @returns {string} The composed class in the format of "block_element block__element--modifier1 block__element--modifier2 ..."
    */
-  static composeClass(b, e, m = null) {
+  static composeClass(b: string, e: string | Array<string> | null = null, m: string | Array<string> | null = null): string {
     // Handle the functon overload case where only the block and its modifiers are set
     if(Array.isArray(e)) {
       m = [...e];

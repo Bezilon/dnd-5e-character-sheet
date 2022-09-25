@@ -31,117 +31,139 @@
     "successes": [ false, false, false ],
     "failures": [ false, false, false ]
   },
-  "attributes": {
-    "strength": {
+  "attributes": [
+    {
+      "name": "strength",
       "proficient": false,
       "value": 10,
-      "skills": {
-        "athletics": {
+      "skills": [
+        {
+          "name": "athletics",
           "proficient": false,
           "expert": false
         }
-      }
+      ]
     },
-    "dexterity": {
+    {
+      "name": "dexterity",
       "proficient": false,
       "value": 10,
-      "skills": {
-        "acrobatics": {
+      "skills": [
+        {
+          "name": "acrobatics",
           "proficient": false,
           "expert": false
         },
-        "sleightOfHand": {
+        {
+          "name": "sleightOfHand",
           "proficient": false,
           "expert": false
         },
-        "stealth": {
+        {
+          "name": "stealth",
           "proficient": false,
           "expert": false
         }
-      }
+      ]
     },
-    "constitution": {
+    {
+      "name": "constitution",
       "proficient": false,
       "value": 10,
-      "skills": {
-        
-      }
+      "skills": []
     },
-    "intelligence": {
+    {
+      "name": "intelligence",
       "proficient": false,
       "value": 10,
-      "skills": {
-        "arcana": {
+      "skills": [
+        {
+          "name": "arcana",
           "proficient": false,
           "expert": false
         },
-        "history": {
+        {
+          "name": "history",
           "proficient": false,
           "expert": false
         },
-        "investigatin": {
+        {
+          "name": "investigatin",
           "proficient": false,
           "expert": false
         },
-        "nature": {
+        {
+          "name": "nature",
           "proficient": false,
           "expert": false
         },
-        "religion": {
+        {
+          "name": "religion",
           "proficient": false,
           "expert": false
         }
-      }
+      ]
     },
-    "wisdom": {
+    {
+      "name": "wisdom",
       "proficient": false,
       "value": 10,
-      "skills": {
-        "animalHandling": {
+      "skills": [
+        {
+          "name": "animalHandling",
           "proficient": false,
           "expert": false
         },
-        "insight": {
+        {
+          "name": "insight",
           "proficient": false,
           "expert": false
         },
-        "medicine": {
+        {
+          "name": "medicine",
           "proficient": false,
           "expert": false
         },
-        "perception": {
+        {
+          "name": "perception",
           "proficient": false,
           "expert": false
         },
-        "survival": {
+        {
+          "name": "survival",
           "proficient": false,
           "expert": false
         }
-      }
+      ]
     },
-    "chasrisma": {
+    {
+      "name": "chasrisma",
       "proficient": false,
       "value": 10,
-      "skills": {
-        "deception": {
+      "skills": [
+        {
+          "name": "deception",
           "proficient": false,
           "expert": false
         },
-        "intimidation": {
+        {
+          "name": "intimidation",
           "proficient": false,
           "expert": false
         },
-        "performance": {
+        {
+          "name": "performance",
           "proficient": false,
           "expert": false
         },
-        "persuasion": {
+        {
+          "name": "persuasion",
           "proficient": false,
           "expert": false
         }
-      }
+      ]
     }
-  },
+  ],
   "martialProficiencies": {
     "lightArmour": false,
     "simpleWeapons": false,
@@ -155,5 +177,6 @@
   "armourClass": 10,
   "initiative": 0,
   "speed": 30,
+  "weaponsAndAttacks": [],
   "classFeautres": []
 }

@@ -1,10 +1,13 @@
-import BEM from "../../models/BEM"
+import React from "react";
+
+import BEM from "../../models/BEM";
 
 import "./Heading.scss";
 
+import { SheetProps } from "../Sheet";
 import { baseClass } from "../ClassSheet";
 
-const Heading = ({character, setCharacter}) => <div className={BEM.composeClass(baseClass, 'heading')}>
+const Heading = ({character, setCharacter}: SheetProps): JSX.Element => <div className={BEM.composeClass(baseClass, 'heading')}>
   <div className={BEM.composeClass(baseClass, 'heading-column')}>
     <div>
       <input value={character.name} onChange={e => setCharacter({...character, name: e.target.value})}/>

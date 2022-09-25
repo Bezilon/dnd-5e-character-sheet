@@ -1,13 +1,18 @@
-import "./AttributesAndSkills.scss"
+import React from "react";
 
-import Case from "case"
+import "./AttributesAndSkills.scss";
 
-import BEM from "../../models/BEM"
+import Case from "case";
 
-import { baseClass } from "../ClassSheet"
-import Character from "../../models/Character"
+import BEM from "../../models/BEM";
 
-const AttributesAndSkills = ({character, setCharacter}) => <div>
+import Character from "../../models/Character";
+
+import { baseClass } from "../ClassSheet";
+
+import { SheetProps } from "../Sheet";
+
+const AttributesAndSkills = ({character, setCharacter}: SheetProps) => <div>
   { Object.keys(character.attributes).map(attribute => <div key={attribute} className={BEM.composeClass(baseClass, 'skill-container')}>
     <div>
       <div>{attribute.toLocaleUpperCase()}</div>

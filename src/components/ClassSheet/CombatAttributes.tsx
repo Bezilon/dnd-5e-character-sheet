@@ -1,10 +1,13 @@
-import "./CombatAttributes.scss"
+import React from "react";
 
-import BEM from "../../models/BEM"
+import "./CombatAttributes.scss";
 
-import { baseClass } from "../ClassSheet"
+import BEM from "../../models/BEM";
 
-const CombatAttributes = ({character, setCharacter}) => <div className={BEM.composeClass(baseClass, 'combat-attributes')}>
+import { SheetProps } from "../Sheet";
+import { baseClass } from "../ClassSheet";
+
+const CombatAttributes = ({character, setCharacter}: SheetProps) => <div className={BEM.composeClass(baseClass, 'combat-attributes')}>
   <div>
     <div>
       <div>AC</div>

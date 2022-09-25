@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.scss';
 
-import Cookie from './models/Cookie';
-
 import ClassSheet from './components/ClassSheet';
 
-import defaultCharacter from './defaultCharacter.json';
+import Cookie from './models/Cookie';
 import Character from './models/Character';
 
-const App = () => {
-  const [character, setCharacterRaw] = useState(null);
+import defaultCharacter from './defaultCharacter.json';
 
-  const setCharacter = rawCharacter => setCharacterRaw(new Character(rawCharacter));
+const App = () => {
+  const [character, setCharacterRaw] = useState<Character>();
+
+  const setCharacter = (rawCharacter: any) => setCharacterRaw(new Character(rawCharacter));
 
   useEffect(() => {
     const savedCharacter = JSON.parse(Cookie.get('DnD5eCharacterSheet') || 'null')
@@ -26,8 +26,13 @@ const App = () => {
     }
   });
 
+  const classSheetProps = {
+    character,
+    setCharacter
+  }
+
   return <div className="App">
-    { character ? <ClassSheet character={character} setCharacter={setCharacter}/> : null }
+    { character ? <ClassSheet {...classSheetProps}/> : null }
   </div>;
 }
 

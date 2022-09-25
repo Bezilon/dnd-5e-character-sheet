@@ -1,8 +1,9 @@
-import Heading from './ClassSheet/Heading';
+import React from 'react';
 
 import './ClassSheet.scss';
 
-import Sheet from './Sheet';
+import Heading from './ClassSheet/Heading';
+import Sheet, { SheetProps } from './Sheet';
 
 import BEM from '../models/BEM';
 import LeftColumn from './ClassSheet/LeftColumn';
@@ -10,7 +11,7 @@ import CenterColumn from './ClassSheet/CenterColumn';
 
 export const baseClass = 'class-sheet';
 
-const ClassSheet = props => <Sheet>
+const ClassSheet = (props: SheetProps): JSX.Element => <Sheet {...props}>
   <Heading {...props}/>
   <div className={BEM.composeClass(baseClass, 'content')}>
     <LeftColumn {...props}/>
