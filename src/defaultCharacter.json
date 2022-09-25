@@ -178,5 +178,11 @@
   "initiative": 0,
   "speed": 30,
   "weaponsAndAttacks": [],
-  "classFeautres": []
+  "classFeautres": [
+    {
+      "name": "Feature Test",
+      "description": "Lorem ipsum is not the best description of this test feauter but I guess that works",
+      "levelRequirement": "3"
+    }
+  ]
 }

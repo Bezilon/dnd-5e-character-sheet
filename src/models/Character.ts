@@ -45,7 +45,7 @@ type WeaponAttack = {
   damage: string
 }
 
-type ClassFeature = {
+export type ClassFeature = {
   name: string,
   description: string,
   levelRequirement: number

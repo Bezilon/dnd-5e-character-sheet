@@ -1,0 +1,16 @@
+.class-feature {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  &__name {
+  }
+
+  &__level-requirement {
+  }
+
+  &__description {
+    grid-column: 1 / span 2;
+  }
+}
